@@ -14,10 +14,9 @@ namespace CustomDovs
 {
     public partial class mainForm : Form
     {
-        pBarSaveForm form = new pBarSaveForm();
         bool drag = false; //Перемещается ли форма
         Point start_point = new Point(0, 0); //Стартовые координаты
-        string readyDov = "";
+        string readyDov = ""; //Строка, в которую заполняются данные из массива последовательно из полей
 
         public mainForm()
         {
@@ -360,7 +359,9 @@ namespace CustomDovs
         #endregion
 
         #region CheckBox'ы
-
+        /// <summary>
+        /// Обработка изменения checkbox'а
+        /// </summary>
         private void withoutPatLidCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (withoutPatLidCheckBox.Checked == true)
@@ -382,15 +383,14 @@ namespace CustomDovs
                 }
             }
         }
-
-
-
-
-
-
         #endregion
 
-        private async void createButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Главный метод, формирование файла доверенности из массива, сохранение массива в файл.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void createButton_Click(object sender, EventArgs e)
         {
             createButton.Enabled = false;
             string[] currentDov = newDov();
@@ -434,6 +434,10 @@ namespace CustomDovs
             createButton.Enabled = true;
         }
 
+        /// <summary>
+        /// Обработка данных из полей
+        /// </summary>
+        /// <returns>Возвращает массив string с информацией из полей</returns>
         public string[] newDov() 
         {
             string[] dov = new string[19];
@@ -462,15 +466,25 @@ namespace CustomDovs
             return dov;
         }
 
+        /// <summary>
+        /// Проверка заполненности полей p.s. работает как-то не так
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public string CheckTextBox(string text) 
         {
             if (text != null || text != "")
             {
                 return text;
             }
-            return "Error";
+            return "";
         }
 
+        /// <summary>
+        /// Проверка значения в массиве доверенности
+        /// </summary>
+        /// <param name="dov"></param>
+        /// <returns></returns>
         public string ValueInArray(string[] dov) 
         {
             foreach (string value in dov)
