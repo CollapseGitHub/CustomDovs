@@ -25,7 +25,33 @@ namespace CustomDovs
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-
+            toolTip.SetToolTip(guidTextBox, "Идентификатор продукта");
+            toolTip.SetToolTip(telNumMTextBox, "Телефон\nФормат ввода 79999999999");
+            toolTip.SetToolTip(numDovTextBox, "Номер доверенности");
+            toolTip.SetToolTip(sDataDovMTextBox, "Дата начала действия доверенности" +
+                "\nФормат ввода ГГГГ-ММ-ДД, где ГГГГ - Год, ММ - Месяц, ДД - День");
+            toolTip.SetToolTip(eDataDovMTextBox, "Дата окончания действия доверенности" +
+                "\nФормат ввода ГГГГ-ММ-ДД, где ГГГГ - Год, ММ - Месяц, ДД - День");
+            toolTip.SetToolTip(snilsPodMTextBox, "СНИЛС подписанта");
+            toolTip.SetToolTip(birthPodMTextBox, "Дата рождения подписанта" +
+                "\nФормат ввода ГГГГ-ММ-ДД, где ГГГГ - Год, ММ - Месяц, ДД - День");
+            toolTip.SetToolTip(dataPodPassMTextBox, "Дата выдачи паспорта подписанта" +
+                "\nФормат ввода ГГГГ-ММ-ДД, где ГГГГ - Год, ММ - Месяц, ДД - День");
+            toolTip.SetToolTip(serialNumMTextBox, "Серия паспорта подписанта");
+            toolTip.SetToolTip(passNumMTextBox, "Номер паспорта подписанта");
+            toolTip.SetToolTip(codeNumMTextBox, "Код подразделения из паспорта подписанта");
+            toolTip.SetToolTip(whoPodTextBox, "Кем выдан паспорт подписанта");
+            toolTip.SetToolTip(placeBirthPodTextBox, "Место рождения подписанта");
+            toolTip.SetToolTip(secNameLidTextBox, "Фамилия руководителя");
+            toolTip.SetToolTip(firNameLidTextBox, "Имя руководителя");
+            toolTip.SetToolTip(patNameLidTextBox, "Отчетсво руководителя");
+            toolTip.SetToolTip(maleTextBox, "Пол руководителя" +
+                "\nФормат ввода 1 - мужской 2 - женский");
+            toolTip.SetToolTip(snilsLidMTextBox, "СНИЛС руководителя");
+            toolTip.SetToolTip(postLidTextBox, "Должность руководителя");
+            toolTip.SetToolTip(refreshFirBlockButton, "Очистить общий блок");
+            toolTip.SetToolTip(refreshSecBlockButton, "Очистить блок подписанта");
+            toolTip.SetToolTip(refreshThiBlockButton, "Очистить блок руководителя");
         }
 
         #region Перемещение формы
@@ -148,10 +174,10 @@ namespace CustomDovs
             if (result == DialogResult.OK) 
             {
                 guidTextBox.Text = "Идентификатор продукта";
-                telNumberTextBox.Text = "Телефон";
+                telNumMTextBox.Text = "";
                 numDovTextBox.Text = "Номер доверенности";
-                startDataDovTextBox.Text = "Дата начала действия";
-                endDataTextBox.Text = "Дата окончания действия";
+                sDataDovMTextBox.Text = "";
+                eDataDovMTextBox.Text = "";
             }
         }
 
@@ -165,12 +191,12 @@ namespace CustomDovs
                 MessageBoxButtons.OKCancel, icon);
             if (result == DialogResult.OK)
             {
-                snilsPodTextBox.Text = "СНИЛС подписанта";
-                birthPodTextBox.Text = "Дата рождения подписанта";
-                dataPodPassTextBox.Text = "Дата выдачи паспорта";
-                serialNumTextBox.Text = "Серия";
-                passNumTextBox.Text = "Номер паспорта";
-                codeNumTextBox.Text = "Код подразделения";
+                snilsPodMTextBox.Text = "";
+                birthPodMTextBox.Text = "";
+                dataPodPassMTextBox.Text = "";
+                serialNumMTextBox.Text = "";
+                passNumMTextBox.Text = "";
+                codeNumMTextBox.Text = "";
                 whoPodTextBox.Text = "Кем выдан";
                 placeBirthPodTextBox.Text = "Место рождения";
             }
@@ -190,7 +216,7 @@ namespace CustomDovs
                 firNameLidTextBox.Text = "Имя руководителя";
                 patNameLidTextBox.Text = "Отчество";
                 maleTextBox.Text = "Пол руководителя";
-                snilsLidTextBox.Text = "СНИЛС Руководителя";
+                snilsLidMTextBox.Text = "";
                 postLidTextBox.Text = "Должность";
                 withoutPatLidCheckBox.Checked = false;
             }
@@ -208,14 +234,6 @@ namespace CustomDovs
             }
         }
 
-        private void telNumberTextBox_Click(object sender, EventArgs e)
-        {
-            if (telNumberTextBox.Text == "Телефон")
-            {
-                telNumberTextBox.Text = "";
-            }
-        }
-
         private void numDovTextBox_Click(object sender, EventArgs e)
         {
             if (numDovTextBox.Text == "Номер доверенности")
@@ -224,71 +242,10 @@ namespace CustomDovs
             }
         }
 
-        private void startDataDovTextBox_Click(object sender, EventArgs e)
-        {
-            if (startDataDovTextBox.Text == "Дата начала действия")
-            {
-                startDataDovTextBox.Text = "";
-            }
-        }
 
-        private void endDataTextBox_Click(object sender, EventArgs e)
-        {
-            if (endDataTextBox.Text == "Дата окончания действия")
-            {
-                endDataTextBox.Text = "";
-            }
-        }
         #endregion
 
         #region Подписант
-        private void snilsPodTextBox_Click(object sender, EventArgs e)
-        {
-            if (snilsPodTextBox.Text == "СНИЛС подписанта")
-            {
-                snilsPodTextBox.Text = "";
-            }
-        }
-
-        private void birthPodTextBox_Click(object sender, EventArgs e)
-        {
-            if (birthPodTextBox.Text == "Дата рождения подписанта")
-            {
-                birthPodTextBox.Text = "";
-            }
-        }
-
-        private void dataPodPassTextBox_Click(object sender, EventArgs e)
-        {
-            if (dataPodPassTextBox.Text == "Дата выдачи паспорта")
-            {
-                dataPodPassTextBox.Text = "";
-            }
-        }
-
-        private void serialNumTextBox_Click(object sender, EventArgs e)
-        {
-            if (serialNumTextBox.Text == "Серия")
-            {
-                serialNumTextBox.Text = "";
-            }
-        }
-
-        private void passNumTextBox_Click(object sender, EventArgs e)
-        {
-            if (passNumTextBox.Text == "Номер паспорта")
-            {
-                passNumTextBox.Text = "";
-            }
-        }
-
-        private void codeNumTextBox_Click(object sender, EventArgs e)
-        {
-            if (codeNumTextBox.Text == "Код подразделения")
-            {
-                codeNumTextBox.Text = "";
-            }
-        }
 
         private void whoPodTextBox_Click(object sender, EventArgs e)
         {
@@ -337,14 +294,6 @@ namespace CustomDovs
             if (maleTextBox.Text == "Пол руководителя")
             {
                 maleTextBox.Text = "";
-            }
-        }
-
-        private void snilsLidTextBox_Click(object sender, EventArgs e)
-        {
-            if (snilsLidTextBox.Text == "СНИЛС Руководителя")
-            {
-                snilsLidTextBox.Text = "";
             }
         }
 
@@ -442,14 +391,14 @@ namespace CustomDovs
         {
             string[] dov = new string[19];
             dov[0] = CheckTextBox(guidTextBox.Text.Trim()); //Гуид продукта
-            dov[1] = CheckTextBox(snilsPodTextBox.Text.Trim()); //СНИЛС подписанта
-            dov[2] = CheckTextBox(birthPodTextBox.Text.Trim()); //дата рождения подписанта
-            dov[3] = CheckTextBox(dataPodPassTextBox.Text.Trim()); //дата выдачи паспорта
+            dov[1] = CheckTextBox(snilsPodMTextBox.Text.Trim()); //СНИЛС подписанта
+            dov[2] = CheckTextBox(birthPodMTextBox.Text.Trim()); //дата рождения подписанта
+            dov[3] = CheckTextBox(dataPodPassMTextBox.Text.Trim()); //дата выдачи паспорта
             dov[4] = CheckTextBox(whoPodTextBox.Text.Trim()); //Кем выдан
-            dov[5] = CheckTextBox(passNumTextBox.Text.Trim()); //Номер паспорта
-            dov[6] = CheckTextBox(serialNumTextBox.Text.Trim()); //Серия
+            dov[5] = CheckTextBox(passNumMTextBox.Text.Trim()); //Номер паспорта
+            dov[6] = CheckTextBox(serialNumMTextBox.Text.Trim()); //Серия
             dov[7] = CheckTextBox(placeBirthPodTextBox.Text.Trim()); //Место рождения
-            dov[8] = CheckTextBox(codeNumTextBox.Text.Trim()); //Код подразделения
+            dov[8] = CheckTextBox(codeNumMTextBox.Text.Trim()); //Код подразделения
             dov[9] = CheckTextBox(firNameLidTextBox.Text.Trim()); //Имя руководителя
             dov[10] = CheckTextBox(secNameLidTextBox.Text.Trim()); //Фамилия руководителя
             if (withoutPatLidCheckBox.Checked == false)
@@ -457,12 +406,12 @@ namespace CustomDovs
                 dov[11] = CheckTextBox(patNameLidTextBox.Text.Trim()); //Отчество
             }
             dov[12] = CheckTextBox(postLidTextBox.Text.Trim()); //Должность
-            dov[13] = CheckTextBox(telNumberTextBox.Text.Trim()); //Телефон
-            dov[14] = CheckTextBox(snilsLidTextBox.Text.Trim()); //СНИЛС Руководителя 
+            dov[13] = CheckTextBox(telNumMTextBox.Text.Trim()); //Телефон
+            dov[14] = CheckTextBox(snilsLidMTextBox.Text.Trim()); //СНИЛС Руководителя 
             dov[15] = CheckTextBox(maleTextBox.Text.Trim()); //Пол
             dov[16] = CheckTextBox(numDovTextBox.Text.Trim()); //Номер доверенности
-            dov[17] = CheckTextBox(startDataDovTextBox.Text.Trim()); //дата начала действия
-            dov[18] = CheckTextBox(endDataTextBox.Text.Trim()); //дата окончания действия
+            dov[17] = CheckTextBox(sDataDovMTextBox.Text.Trim()); //дата начала действия
+            dov[18] = CheckTextBox(eDataDovMTextBox.Text.Trim()); //дата окончания действия
             return dov;
         }
 
@@ -489,7 +438,7 @@ namespace CustomDovs
         {
             foreach (string value in dov)
             {
-                if (value == dov.Last())
+                if (value == dov[18])
                 {
                     readyDov += $"{value}";
                 }
@@ -500,6 +449,5 @@ namespace CustomDovs
             }
             return readyDov;
         }
-
     }
 }

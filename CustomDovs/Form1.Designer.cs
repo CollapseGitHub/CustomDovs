@@ -28,26 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.guidTextBox = new System.Windows.Forms.TextBox();
-            this.snilsPodTextBox = new System.Windows.Forms.TextBox();
-            this.birthPodTextBox = new System.Windows.Forms.TextBox();
-            this.dataPodPassTextBox = new System.Windows.Forms.TextBox();
             this.whoPodTextBox = new System.Windows.Forms.TextBox();
-            this.passNumTextBox = new System.Windows.Forms.TextBox();
-            this.serialNumTextBox = new System.Windows.Forms.TextBox();
             this.placeBirthPodTextBox = new System.Windows.Forms.TextBox();
-            this.codeNumTextBox = new System.Windows.Forms.TextBox();
             this.firNameLidTextBox = new System.Windows.Forms.TextBox();
             this.secNameLidTextBox = new System.Windows.Forms.TextBox();
             this.patNameLidTextBox = new System.Windows.Forms.TextBox();
             this.postLidTextBox = new System.Windows.Forms.TextBox();
-            this.telNumberTextBox = new System.Windows.Forms.TextBox();
-            this.snilsLidTextBox = new System.Windows.Forms.TextBox();
             this.maleTextBox = new System.Windows.Forms.TextBox();
             this.numDovTextBox = new System.Windows.Forms.TextBox();
-            this.startDataDovTextBox = new System.Windows.Forms.TextBox();
-            this.endDataTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,6 +53,17 @@
             this.logoAO = new System.Windows.Forms.PictureBox();
             this.minus = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
+            this.telNumMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.sDataDovMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.eDataDovMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.snilsPodMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.birthPodMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.dataPodPassMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.serialNumMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.passNumMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.codeNumMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.snilsLidMTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logoAO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,55 +81,13 @@
             this.guidTextBox.Text = "Идентификатор продукта";
             this.guidTextBox.Click += new System.EventHandler(this.guidTextBox_Click);
             // 
-            // snilsPodTextBox
-            // 
-            this.snilsPodTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.snilsPodTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.snilsPodTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.snilsPodTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.snilsPodTextBox.Location = new System.Drawing.Point(19, 179);
-            this.snilsPodTextBox.Name = "snilsPodTextBox";
-            this.snilsPodTextBox.Size = new System.Drawing.Size(176, 24);
-            this.snilsPodTextBox.TabIndex = 3;
-            this.snilsPodTextBox.TabStop = false;
-            this.snilsPodTextBox.Text = "СНИЛС подписанта";
-            this.snilsPodTextBox.Click += new System.EventHandler(this.snilsPodTextBox_Click);
-            // 
-            // birthPodTextBox
-            // 
-            this.birthPodTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.birthPodTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.birthPodTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.birthPodTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.birthPodTextBox.Location = new System.Drawing.Point(201, 179);
-            this.birthPodTextBox.Name = "birthPodTextBox";
-            this.birthPodTextBox.Size = new System.Drawing.Size(198, 24);
-            this.birthPodTextBox.TabIndex = 4;
-            this.birthPodTextBox.TabStop = false;
-            this.birthPodTextBox.Text = "Дата рождения подписанта";
-            this.birthPodTextBox.Click += new System.EventHandler(this.birthPodTextBox_Click);
-            // 
-            // dataPodPassTextBox
-            // 
-            this.dataPodPassTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.dataPodPassTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dataPodPassTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataPodPassTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataPodPassTextBox.Location = new System.Drawing.Point(405, 179);
-            this.dataPodPassTextBox.Name = "dataPodPassTextBox";
-            this.dataPodPassTextBox.Size = new System.Drawing.Size(160, 24);
-            this.dataPodPassTextBox.TabIndex = 5;
-            this.dataPodPassTextBox.TabStop = false;
-            this.dataPodPassTextBox.Text = "Дата выдачи паспорта";
-            this.dataPodPassTextBox.Click += new System.EventHandler(this.dataPodPassTextBox_Click);
-            // 
             // whoPodTextBox
             // 
             this.whoPodTextBox.BackColor = System.Drawing.Color.PeachPuff;
             this.whoPodTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.whoPodTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.whoPodTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.whoPodTextBox.Location = new System.Drawing.Point(19, 239);
+            this.whoPodTextBox.Location = new System.Drawing.Point(19, 209);
             this.whoPodTextBox.Name = "whoPodTextBox";
             this.whoPodTextBox.Size = new System.Drawing.Size(662, 24);
             this.whoPodTextBox.TabIndex = 6;
@@ -135,61 +95,19 @@
             this.whoPodTextBox.Text = "Кем выдан";
             this.whoPodTextBox.Click += new System.EventHandler(this.whoPodTextBox_Click);
             // 
-            // passNumTextBox
-            // 
-            this.passNumTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.passNumTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passNumTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passNumTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.passNumTextBox.Location = new System.Drawing.Point(190, 209);
-            this.passNumTextBox.Name = "passNumTextBox";
-            this.passNumTextBox.Size = new System.Drawing.Size(118, 24);
-            this.passNumTextBox.TabIndex = 7;
-            this.passNumTextBox.TabStop = false;
-            this.passNumTextBox.Text = "Номер паспорта";
-            this.passNumTextBox.Click += new System.EventHandler(this.passNumTextBox_Click);
-            // 
-            // serialNumTextBox
-            // 
-            this.serialNumTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.serialNumTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.serialNumTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.serialNumTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.serialNumTextBox.Location = new System.Drawing.Point(19, 209);
-            this.serialNumTextBox.Name = "serialNumTextBox";
-            this.serialNumTextBox.Size = new System.Drawing.Size(165, 24);
-            this.serialNumTextBox.TabIndex = 8;
-            this.serialNumTextBox.TabStop = false;
-            this.serialNumTextBox.Text = "Серия";
-            this.serialNumTextBox.Click += new System.EventHandler(this.serialNumTextBox_Click);
-            // 
             // placeBirthPodTextBox
             // 
             this.placeBirthPodTextBox.BackColor = System.Drawing.Color.PeachPuff;
             this.placeBirthPodTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.placeBirthPodTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.placeBirthPodTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.placeBirthPodTextBox.Location = new System.Drawing.Point(19, 269);
+            this.placeBirthPodTextBox.Location = new System.Drawing.Point(19, 239);
             this.placeBirthPodTextBox.Name = "placeBirthPodTextBox";
-            this.placeBirthPodTextBox.Size = new System.Drawing.Size(289, 24);
+            this.placeBirthPodTextBox.Size = new System.Drawing.Size(614, 24);
             this.placeBirthPodTextBox.TabIndex = 9;
             this.placeBirthPodTextBox.TabStop = false;
             this.placeBirthPodTextBox.Text = "Место рождения";
             this.placeBirthPodTextBox.Click += new System.EventHandler(this.placeBirthPodTextBox_Click);
-            // 
-            // codeNumTextBox
-            // 
-            this.codeNumTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.codeNumTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.codeNumTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.codeNumTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.codeNumTextBox.Location = new System.Drawing.Point(314, 209);
-            this.codeNumTextBox.Name = "codeNumTextBox";
-            this.codeNumTextBox.Size = new System.Drawing.Size(167, 24);
-            this.codeNumTextBox.TabIndex = 10;
-            this.codeNumTextBox.TabStop = false;
-            this.codeNumTextBox.Text = "Код подразделения";
-            this.codeNumTextBox.Click += new System.EventHandler(this.codeNumTextBox_Click);
             // 
             // firNameLidTextBox
             // 
@@ -197,7 +115,7 @@
             this.firNameLidTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.firNameLidTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.firNameLidTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.firNameLidTextBox.Location = new System.Drawing.Point(260, 342);
+            this.firNameLidTextBox.Location = new System.Drawing.Point(260, 318);
             this.firNameLidTextBox.Name = "firNameLidTextBox";
             this.firNameLidTextBox.Size = new System.Drawing.Size(234, 24);
             this.firNameLidTextBox.TabIndex = 11;
@@ -211,7 +129,7 @@
             this.secNameLidTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.secNameLidTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.secNameLidTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.secNameLidTextBox.Location = new System.Drawing.Point(20, 342);
+            this.secNameLidTextBox.Location = new System.Drawing.Point(20, 318);
             this.secNameLidTextBox.Name = "secNameLidTextBox";
             this.secNameLidTextBox.Size = new System.Drawing.Size(234, 24);
             this.secNameLidTextBox.TabIndex = 12;
@@ -225,7 +143,7 @@
             this.patNameLidTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.patNameLidTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.patNameLidTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.patNameLidTextBox.Location = new System.Drawing.Point(500, 342);
+            this.patNameLidTextBox.Location = new System.Drawing.Point(500, 318);
             this.patNameLidTextBox.Name = "patNameLidTextBox";
             this.patNameLidTextBox.Size = new System.Drawing.Size(181, 24);
             this.patNameLidTextBox.TabIndex = 13;
@@ -239,7 +157,7 @@
             this.postLidTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.postLidTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.postLidTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.postLidTextBox.Location = new System.Drawing.Point(403, 372);
+            this.postLidTextBox.Location = new System.Drawing.Point(297, 348);
             this.postLidTextBox.Name = "postLidTextBox";
             this.postLidTextBox.Size = new System.Drawing.Size(181, 24);
             this.postLidTextBox.TabIndex = 14;
@@ -247,41 +165,13 @@
             this.postLidTextBox.Text = "Должность";
             this.postLidTextBox.Click += new System.EventHandler(this.postLidTextBox_Click);
             // 
-            // telNumberTextBox
-            // 
-            this.telNumberTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.telNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.telNumberTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.telNumberTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.telNumberTextBox.Location = new System.Drawing.Point(348, 72);
-            this.telNumberTextBox.Name = "telNumberTextBox";
-            this.telNumberTextBox.Size = new System.Drawing.Size(157, 24);
-            this.telNumberTextBox.TabIndex = 15;
-            this.telNumberTextBox.TabStop = false;
-            this.telNumberTextBox.Text = "Телефон";
-            this.telNumberTextBox.Click += new System.EventHandler(this.telNumberTextBox_Click);
-            // 
-            // snilsLidTextBox
-            // 
-            this.snilsLidTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.snilsLidTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.snilsLidTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.snilsLidTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.snilsLidTextBox.Location = new System.Drawing.Point(163, 372);
-            this.snilsLidTextBox.Name = "snilsLidTextBox";
-            this.snilsLidTextBox.Size = new System.Drawing.Size(234, 24);
-            this.snilsLidTextBox.TabIndex = 16;
-            this.snilsLidTextBox.TabStop = false;
-            this.snilsLidTextBox.Text = "СНИЛС Руководителя";
-            this.snilsLidTextBox.Click += new System.EventHandler(this.snilsLidTextBox_Click);
-            // 
             // maleTextBox
             // 
             this.maleTextBox.BackColor = System.Drawing.Color.PeachPuff;
             this.maleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maleTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maleTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.maleTextBox.Location = new System.Drawing.Point(20, 372);
+            this.maleTextBox.Location = new System.Drawing.Point(20, 348);
             this.maleTextBox.Name = "maleTextBox";
             this.maleTextBox.Size = new System.Drawing.Size(138, 24);
             this.maleTextBox.TabIndex = 17;
@@ -302,34 +192,6 @@
             this.numDovTextBox.TabStop = false;
             this.numDovTextBox.Text = "Номер доверенности";
             this.numDovTextBox.Click += new System.EventHandler(this.numDovTextBox_Click);
-            // 
-            // startDataDovTextBox
-            // 
-            this.startDataDovTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.startDataDovTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.startDataDovTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startDataDovTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.startDataDovTextBox.Location = new System.Drawing.Point(20, 105);
-            this.startDataDovTextBox.Name = "startDataDovTextBox";
-            this.startDataDovTextBox.Size = new System.Drawing.Size(234, 24);
-            this.startDataDovTextBox.TabIndex = 19;
-            this.startDataDovTextBox.TabStop = false;
-            this.startDataDovTextBox.Text = "Дата начала действия";
-            this.startDataDovTextBox.Click += new System.EventHandler(this.startDataDovTextBox_Click);
-            // 
-            // endDataTextBox
-            // 
-            this.endDataTextBox.BackColor = System.Drawing.Color.PeachPuff;
-            this.endDataTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.endDataTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.endDataTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.endDataTextBox.Location = new System.Drawing.Point(260, 105);
-            this.endDataTextBox.Name = "endDataTextBox";
-            this.endDataTextBox.Size = new System.Drawing.Size(234, 24);
-            this.endDataTextBox.TabIndex = 20;
-            this.endDataTextBox.TabStop = false;
-            this.endDataTextBox.Text = "Дата окончания действия";
-            this.endDataTextBox.Click += new System.EventHandler(this.endDataTextBox_Click);
             // 
             // label1
             // 
@@ -355,7 +217,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(47, 311);
+            this.label3.Location = new System.Drawing.Point(47, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 20);
             this.label3.TabIndex = 25;
@@ -374,13 +236,13 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Location = new System.Drawing.Point(11, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(678, 125);
+            this.label5.Size = new System.Drawing.Size(678, 99);
             this.label5.TabIndex = 27;
             // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(11, 337);
+            this.label6.Location = new System.Drawing.Point(11, 313);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(678, 65);
             this.label6.TabIndex = 28;
@@ -389,7 +251,7 @@
             // 
             this.withoutPatLidCheckBox.BackColor = System.Drawing.Color.LightGray;
             this.withoutPatLidCheckBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.withoutPatLidCheckBox.Location = new System.Drawing.Point(19, 419);
+            this.withoutPatLidCheckBox.Location = new System.Drawing.Point(11, 402);
             this.withoutPatLidCheckBox.Name = "withoutPatLidCheckBox";
             this.withoutPatLidCheckBox.Size = new System.Drawing.Size(120, 20);
             this.withoutPatLidCheckBox.TabIndex = 29;
@@ -403,7 +265,7 @@
             this.refreshThiBlockButton.FlatAppearance.BorderSize = 0;
             this.refreshThiBlockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshThiBlockButton.Image = global::CustomDovs.Properties.Resources.refresh;
-            this.refreshThiBlockButton.Location = new System.Drawing.Point(659, 375);
+            this.refreshThiBlockButton.Location = new System.Drawing.Point(659, 351);
             this.refreshThiBlockButton.Name = "refreshThiBlockButton";
             this.refreshThiBlockButton.Padding = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.refreshThiBlockButton.Size = new System.Drawing.Size(22, 22);
@@ -419,7 +281,7 @@
             this.refreshSecBlockButton.FlatAppearance.BorderSize = 0;
             this.refreshSecBlockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshSecBlockButton.Image = global::CustomDovs.Properties.Resources.refresh;
-            this.refreshSecBlockButton.Location = new System.Drawing.Point(659, 272);
+            this.refreshSecBlockButton.Location = new System.Drawing.Point(659, 241);
             this.refreshSecBlockButton.Name = "refreshSecBlockButton";
             this.refreshSecBlockButton.Padding = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.refreshSecBlockButton.Size = new System.Drawing.Size(22, 22);
@@ -450,7 +312,7 @@
             this.createButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.createButton.Image = global::CustomDovs.Properties.Resources.accept;
             this.createButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.createButton.Location = new System.Drawing.Point(304, 421);
+            this.createButton.Location = new System.Drawing.Point(304, 411);
             this.createButton.Name = "createButton";
             this.createButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.createButton.Size = new System.Drawing.Size(93, 53);
@@ -505,12 +367,145 @@
             this.close.MouseEnter += new System.EventHandler(this.close_MouseEnter);
             this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
             // 
+            // telNumMTextBox
+            // 
+            this.telNumMTextBox.AsciiOnly = true;
+            this.telNumMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.telNumMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.telNumMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.telNumMTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.telNumMTextBox.Location = new System.Drawing.Point(348, 72);
+            this.telNumMTextBox.Mask = "70000000000";
+            this.telNumMTextBox.Name = "telNumMTextBox";
+            this.telNumMTextBox.PromptChar = '*';
+            this.telNumMTextBox.Size = new System.Drawing.Size(157, 23);
+            this.telNumMTextBox.TabIndex = 0;
+            this.telNumMTextBox.TabStop = false;
+            // 
+            // sDataDovMTextBox
+            // 
+            this.sDataDovMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.sDataDovMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sDataDovMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sDataDovMTextBox.Location = new System.Drawing.Point(20, 105);
+            this.sDataDovMTextBox.Mask = "0000-00-00";
+            this.sDataDovMTextBox.Name = "sDataDovMTextBox";
+            this.sDataDovMTextBox.PromptChar = '*';
+            this.sDataDovMTextBox.Size = new System.Drawing.Size(96, 23);
+            this.sDataDovMTextBox.TabIndex = 33;
+            // 
+            // eDataDovMTextBox
+            // 
+            this.eDataDovMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.eDataDovMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eDataDovMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.eDataDovMTextBox.Location = new System.Drawing.Point(122, 105);
+            this.eDataDovMTextBox.Mask = "0000-00-00";
+            this.eDataDovMTextBox.Name = "eDataDovMTextBox";
+            this.eDataDovMTextBox.PromptChar = '*';
+            this.eDataDovMTextBox.Size = new System.Drawing.Size(96, 23);
+            this.eDataDovMTextBox.TabIndex = 34;
+            // 
+            // snilsPodMTextBox
+            // 
+            this.snilsPodMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.snilsPodMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.snilsPodMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.snilsPodMTextBox.Location = new System.Drawing.Point(19, 180);
+            this.snilsPodMTextBox.Mask = "000-000-000 00";
+            this.snilsPodMTextBox.Name = "snilsPodMTextBox";
+            this.snilsPodMTextBox.PromptChar = '*';
+            this.snilsPodMTextBox.Size = new System.Drawing.Size(127, 23);
+            this.snilsPodMTextBox.TabIndex = 35;
+            // 
+            // birthPodMTextBox
+            // 
+            this.birthPodMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.birthPodMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.birthPodMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthPodMTextBox.Location = new System.Drawing.Point(152, 180);
+            this.birthPodMTextBox.Mask = "0000-00-00";
+            this.birthPodMTextBox.Name = "birthPodMTextBox";
+            this.birthPodMTextBox.PromptChar = '*';
+            this.birthPodMTextBox.Size = new System.Drawing.Size(96, 23);
+            this.birthPodMTextBox.TabIndex = 36;
+            // 
+            // dataPodPassMTextBox
+            // 
+            this.dataPodPassMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.dataPodPassMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dataPodPassMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataPodPassMTextBox.Location = new System.Drawing.Point(254, 180);
+            this.dataPodPassMTextBox.Mask = "0000-00-00";
+            this.dataPodPassMTextBox.Name = "dataPodPassMTextBox";
+            this.dataPodPassMTextBox.PromptChar = '*';
+            this.dataPodPassMTextBox.Size = new System.Drawing.Size(96, 23);
+            this.dataPodPassMTextBox.TabIndex = 37;
+            // 
+            // serialNumMTextBox
+            // 
+            this.serialNumMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.serialNumMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.serialNumMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.serialNumMTextBox.Location = new System.Drawing.Point(356, 180);
+            this.serialNumMTextBox.Mask = "0000";
+            this.serialNumMTextBox.Name = "serialNumMTextBox";
+            this.serialNumMTextBox.PromptChar = '*';
+            this.serialNumMTextBox.Size = new System.Drawing.Size(41, 23);
+            this.serialNumMTextBox.TabIndex = 38;
+            // 
+            // passNumMTextBox
+            // 
+            this.passNumMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.passNumMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passNumMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passNumMTextBox.Location = new System.Drawing.Point(403, 180);
+            this.passNumMTextBox.Mask = "000000";
+            this.passNumMTextBox.Name = "passNumMTextBox";
+            this.passNumMTextBox.PromptChar = '*';
+            this.passNumMTextBox.Size = new System.Drawing.Size(63, 23);
+            this.passNumMTextBox.TabIndex = 39;
+            // 
+            // codeNumMTextBox
+            // 
+            this.codeNumMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.codeNumMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.codeNumMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.codeNumMTextBox.Location = new System.Drawing.Point(472, 180);
+            this.codeNumMTextBox.Mask = "000000";
+            this.codeNumMTextBox.Name = "codeNumMTextBox";
+            this.codeNumMTextBox.PromptChar = '*';
+            this.codeNumMTextBox.Size = new System.Drawing.Size(63, 23);
+            this.codeNumMTextBox.TabIndex = 40;
+            // 
+            // snilsLidMTextBox
+            // 
+            this.snilsLidMTextBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.snilsLidMTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.snilsLidMTextBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.snilsLidMTextBox.Location = new System.Drawing.Point(164, 348);
+            this.snilsLidMTextBox.Mask = "000-000-000 00";
+            this.snilsLidMTextBox.Name = "snilsLidMTextBox";
+            this.snilsLidMTextBox.PromptChar = '*';
+            this.snilsLidMTextBox.Size = new System.Drawing.Size(127, 23);
+            this.snilsLidMTextBox.TabIndex = 41;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(700, 500);
+            this.Controls.Add(this.snilsLidMTextBox);
+            this.Controls.Add(this.codeNumMTextBox);
+            this.Controls.Add(this.passNumMTextBox);
+            this.Controls.Add(this.serialNumMTextBox);
+            this.Controls.Add(this.dataPodPassMTextBox);
+            this.Controls.Add(this.birthPodMTextBox);
+            this.Controls.Add(this.snilsPodMTextBox);
+            this.Controls.Add(this.eDataDovMTextBox);
+            this.Controls.Add(this.sDataDovMTextBox);
+            this.Controls.Add(this.telNumMTextBox);
             this.Controls.Add(this.refreshThiBlockButton);
             this.Controls.Add(this.refreshSecBlockButton);
             this.Controls.Add(this.refreshFirBlockButton);
@@ -520,24 +515,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.logoAO);
-            this.Controls.Add(this.endDataTextBox);
-            this.Controls.Add(this.startDataDovTextBox);
             this.Controls.Add(this.numDovTextBox);
             this.Controls.Add(this.maleTextBox);
-            this.Controls.Add(this.snilsLidTextBox);
-            this.Controls.Add(this.telNumberTextBox);
             this.Controls.Add(this.postLidTextBox);
             this.Controls.Add(this.patNameLidTextBox);
             this.Controls.Add(this.secNameLidTextBox);
             this.Controls.Add(this.firNameLidTextBox);
-            this.Controls.Add(this.codeNumTextBox);
             this.Controls.Add(this.placeBirthPodTextBox);
-            this.Controls.Add(this.serialNumTextBox);
-            this.Controls.Add(this.passNumTextBox);
             this.Controls.Add(this.whoPodTextBox);
-            this.Controls.Add(this.dataPodPassTextBox);
-            this.Controls.Add(this.birthPodTextBox);
-            this.Controls.Add(this.snilsPodTextBox);
             this.Controls.Add(this.guidTextBox);
             this.Controls.Add(this.minus);
             this.Controls.Add(this.close);
@@ -565,24 +550,14 @@
         private System.Windows.Forms.Button close;
         private System.Windows.Forms.Button minus;
         private System.Windows.Forms.TextBox guidTextBox;
-        private System.Windows.Forms.TextBox snilsPodTextBox;
-        private System.Windows.Forms.TextBox birthPodTextBox;
-        private System.Windows.Forms.TextBox dataPodPassTextBox;
         private System.Windows.Forms.TextBox whoPodTextBox;
-        private System.Windows.Forms.TextBox passNumTextBox;
-        private System.Windows.Forms.TextBox serialNumTextBox;
         private System.Windows.Forms.TextBox placeBirthPodTextBox;
-        private System.Windows.Forms.TextBox codeNumTextBox;
         private System.Windows.Forms.TextBox firNameLidTextBox;
         private System.Windows.Forms.TextBox secNameLidTextBox;
         private System.Windows.Forms.TextBox patNameLidTextBox;
         private System.Windows.Forms.TextBox postLidTextBox;
-        private System.Windows.Forms.TextBox telNumberTextBox;
-        private System.Windows.Forms.TextBox snilsLidTextBox;
         private System.Windows.Forms.TextBox maleTextBox;
         private System.Windows.Forms.TextBox numDovTextBox;
-        private System.Windows.Forms.TextBox startDataDovTextBox;
-        private System.Windows.Forms.TextBox endDataTextBox;
         private System.Windows.Forms.PictureBox logoAO;
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Label label1;
@@ -595,6 +570,17 @@
         private System.Windows.Forms.Button refreshFirBlockButton;
         private System.Windows.Forms.Button refreshSecBlockButton;
         private System.Windows.Forms.Button refreshThiBlockButton;
+        private System.Windows.Forms.MaskedTextBox telNumMTextBox;
+        private System.Windows.Forms.MaskedTextBox sDataDovMTextBox;
+        private System.Windows.Forms.MaskedTextBox eDataDovMTextBox;
+        private System.Windows.Forms.MaskedTextBox snilsPodMTextBox;
+        private System.Windows.Forms.MaskedTextBox birthPodMTextBox;
+        private System.Windows.Forms.MaskedTextBox dataPodPassMTextBox;
+        private System.Windows.Forms.MaskedTextBox serialNumMTextBox;
+        private System.Windows.Forms.MaskedTextBox passNumMTextBox;
+        private System.Windows.Forms.MaskedTextBox codeNumMTextBox;
+        private System.Windows.Forms.MaskedTextBox snilsLidMTextBox;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 
